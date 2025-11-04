@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Сортировка вкладок</h1>
+        
+        <div class="categories">
+            <div class="category-section">
+                <h3>Выберите категории:</h3>
+                
+                <div class="category-item">
+                    <input type="checkbox" id="entertainment" checked>
+                    <label for="entertainment" class="category entertainment">
+                         Развлечения
+                    </label>
+                </div>
+                
+                <div class="category-item">
+                    <input type="checkbox" id="study" checked>
+                    <label for="study" class="category study">
+                         Учеба
+                    </label>
+                </div>
+                
+                <div class="category-item">
+                    <input type="checkbox" id="games" checked>
+                    <label for="games" class="category games">
+                         Игры
+                    </label>
+                </div>
+                
+                <div class="category-item">
+                    <input type="checkbox" id="shopping" checked>
+                    <label for="shopping" class="category shopping">
+                         Шопинг
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="status" id="status"></div>
+        
+        <button id="sortButton" class="sort-button">
+             Отсортировать вкладки
+        </button>
+
+        <div class="results" id="results" style="display: none;">
+            <h4>Результаты сортировки:</h4>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

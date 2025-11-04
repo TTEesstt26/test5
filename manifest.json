@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Sorter - Сортировка вкладок",
+  "version": "1.0",
+  "description": "Сортирует вкладки по категориям: Развлечения, Учеба, Игры, Шопинг",
+  "permissions": ["tabs", "tabGroups"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Сортировать вкладки"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
