@@ -44,6 +44,7 @@ const CATEGORIES = {
         ]
     }
 };
+
 class TabSorter {
     constructor() {
         this.sortButton = document.getElementById('sortButton');
@@ -111,6 +112,35 @@ class TabSorter {
             this.sortButton.disabled = false;
             this.sortButton.textContent = '🔄 Отсортировать вкладки';
         }
+    }
+
+    classifyTabs(tabs, selectedCategories) {
+        const classified = {
+            entertainment: [],
+            study: [],
+            games: [],
+            shopping: [],
+            uncategorized: []
+        };
+
+        tabs.forEach(tab => {
+            let categorized = false;
+            
+            for (const categoryId of selectedCategories) {
+                const category = CATEGORIES[categoryId];
+                if (this.isTabInCategory(tab, category)) {
+                    classified[categoryId].push(tab);
+                    categorized = true;
+                    break;
+                }
+            }
+
+            if (!categorized) {
+                classified.uncategorized.push(tab);
+            }
+        });
+
+        return classified;
     }
 
     isTabInCategory(tab, category) {
